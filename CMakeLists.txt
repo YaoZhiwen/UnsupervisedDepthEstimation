@@ -1,7 +1,7 @@
 cmake_minimum_required( VERSION 2.8 )
-project( resTest )
+project( PredictDepth )
 
-add_executable( resTest resTest.cpp )
+add_executable( PredictDepth PredictDepth.cpp )
 set( CMAKE_CXX_FLAGS "-std=c++11" )
 
 find_package( PCL REQUIRED COMPONENTS common io )
@@ -19,7 +19,7 @@ include_directories( /home/ai/Programs/Caffe/include
   
 link_libraries( ${PCL_LIBRARY_DIRS} )
   
-target_link_libraries( resTest
+target_link_libraries( PredictDepth
   /home/ai/Programs/Caffe/.build_release/lib/libcaffe.so 
   /usr/lib/x86_64-linux-gnu/libopencv_highgui.so
   /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so
